@@ -5,6 +5,7 @@ let cardsFlipped = 0;
 let moves = 0;
 let clicked = false;
 let moveCounter = document.querySelector('#moves');
+let newgameBtn = document.querySelector('#newgame');
 
 
 const COLORS = [
@@ -64,6 +65,13 @@ function createDivsForColors(colorArray) {
   }
 }
 
+//Clicking New Game button will refresh the page
+function loadNewGame(){
+  newgameBtn.addEventListener("click", function(){
+  location.reload();
+} )
+}
+
 // TODO: Implement this function!
 function handleCardClick(event) {
     if(clicked) return;
@@ -121,3 +129,4 @@ function handleCardClick(event) {
 
 // when the DOM loads
 createDivsForColors(shuffledColors);
+loadNewGame();
