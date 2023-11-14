@@ -109,10 +109,12 @@ function handleCardClick(event) {
         },1000
         )
     }
-    if(cardsFlipped === COLORS.length){
+    setTimeout(function(){
+        if(cardsFlipped === COLORS.length){
         alert('You win. Great work!');
-    }
-  }
+        }
+    }, 250);
+  };
 
 
 }
