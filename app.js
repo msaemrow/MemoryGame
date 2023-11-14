@@ -4,6 +4,7 @@ let card2 = null;
 let cardsFlipped = 0;
 let moves = 0;
 let clicked = false;
+let moveCounter = document.querySelector('#moves');
 
 
 const COLORS = [
@@ -92,7 +93,7 @@ function handleCardClick(event) {
         card2=null;
         clicked = false;
         moves +=1;
-        console.log(moves)
+        moveCounter.innerText = moves;
     } else {
         console.log("No match here");
         setTimeout(function(){
@@ -104,7 +105,7 @@ function handleCardClick(event) {
             card2=null;
             clicked = false;
             moves +=1;
-            console.log(moves);
+            moveCounter.innerText = moves;
         },1000
         )
     }
